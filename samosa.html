@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Fjalla+One&family=Great+Vibes&family=Lobster+Two&family=Mooli&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- rimix icon cdn link -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/samosa.css">
+    <title>Samosa</title>
+</head>
+
+<body>
+    <main>
+
+        <!-- header section start -->
+        <section class="header_container">
+            <header>
+                <h3 class="logo"><a href="index.html">Magic Pan</a></h3>
+                <div class="user_log">
+                    <span class="log_in_btn_container login_menu_btn"><i class="ri-user-6-line log_in_btn_icon"></i>Log in
+                    </span>
+                    <div class="log_box_container" id="login_form_show">
+                        <div class="log_box_all_form_container">
+                            <i class="fa-solid fa-xmark log_cross_icon" id="log_form_close"></i>
+                            <div class="log_box">
+                                <form action="" class="log_in_form">
+                                    <h2>Log in</h2>
+                                    <div class="log_in_input_container">
+                                        <input type="text" id="name" class="log_in_input" placeholder=" " required>
+                                        <label for="name" class="log_in_input_label">Enter Username</label>
+                                    </div>
+                                    <div class="log_in_input_container">
+                                        <input type="password" id="password" class="log_in_input" placeholder=" " required>
+                                        <label for="password" class="log_in_input_label">Enter Your Password</label>
+                                    </div>
+                                    <div class="log_in_remember_container">
+                                        <input type="checkbox" id="remember" class="log_in_remember">
+                                        <label for="remember" class="log_in_remember_label">Remember me</label>
+                                    </div>
+                                    <input type="submit" class="login_submit_btn">
+                                    <div class="no_log_in_account_container">
+                                        <p>Don't have an account?<span style="color: orangered;" id="sign_up">Sign up</span> </p>
+                                    </div>
+                                </form>
+                                <form action="" class="sign_up_form">
+                                    <h2>Sign Up</h2>
+                                    <div class="sign_up_input_container">
+                                        <input type="text" id="sign_up_name" class="sign_up_input" placeholder=" " required>
+                                        <label for="sign_up_name" class="sign_up_input_label">Enter Username</label>
+                                    </div>
+                                    <div class="sign_up_input_container">
+                                        <input type="password" id="sign_up_password" class="sign_up_input" placeholder=" " required>
+                                        <label for="sign_up_password" class="sign_up_input_label">Enter Your Password</label>
+                                    </div>
+                                    <div class="sign_up_input_container">
+                                        <input type="password" id="sign_up_confirm_password" class="sign_up_input" placeholder=" " required>
+                                        <label for="sign_up_confirm_password" class="sign_up_input_label">Enter Confirm Password</label>
+                                    </div>
+                                    <div class="sign_up_remember_container">
+                                        <input type="checkbox" id="sign_up_remember" class="sign_up_remember">
+                                        <label for="sign_up_remember" class="sign_up_remember_label">Remember me</label>
+                                    </div>
+                                    <input type="submit" class="sign_up_submit_btn">
+                                    <div class="no_sign_up_account_container">
+                                        <p>Already have an account?<span style="color: orangered;" id="log_in">Log in</span> </p>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <span><a href="#">Sign up</a></span> -->
+                </div>
+                <i class="ri-menu-3-fill" id="menu_button"></i>
+                <nav class="slider_menu" id="slide_menu">
+                    <h3 class="slider_menu_logo">Magic Pan</h3>
+                    <ul>
+                        <a href="index.html">
+                            <i class="ri-home-4-line"></i>
+                            <li>Home</li>
+                        </a>
+                        <a href="all_food.html">
+                            <i class="ri-restaurant-line"></i>
+                            <li>Foods</li>
+                        </a>
+                        <a href="gallery.html">
+                            <i class="ri-gallery-line"></i>
+                            <li>Gallery</li>
+                        </a>
+                        <a href="about.html">
+                            <i class="ri-team-line"></i>
+                            <li>About Us</li>
+                        </a>
+                        <a href="#" class="menu_book_btn">
+                            <i class="ri-book-open-line"></i>
+                            <li>View Menu</li>
+                        </a>
+                        <a href="contact.html">
+                            <i class="ri-customer-service-2-line"></i>
+                            <li>Contact us</li>
+                        </a>
+                        <a href="#">
+                            <i class="ri-map-pin-user-line"></i>
+                            <li>Choose Location</li>
+                        </a>
+                        <a href="#" class="login_menu_btn">
+                            <i class="ri-user-6-line"></i>
+                            <li>Log in</li>
+                        </a>
+                    </ul>
+                    <div class="slider_menu_phone">
+                        <i class="ri-phone-fill"></i>
+                        <p>72757816XX</p>
+                    </div>
+                </nav>
+                
+                <!-- menu book show on view menu btn click -->
+                <div class="menu_book" id="menu-book">
+                    <figure>
+                        <img src="img/menu-book.jpg"   alt="menu book">
+                        <i class="ri-close-circle-line" id="close_menu_book"></i>
+                    </figure>
+                </div>
+            </header>
+            <div class="header_heading_serach_container">
+                <h1>Samosa</h1>
+                <p>Samosas, a taste of tradition</p>
+                <div class="search_food">
+                    <div class="find_location_container">
+                        <input list="locations" name="location" class="location_input" id="location"
+                            placeholder="Choose Your Location">
+                        <datalist id="locations">
+                            <option class="red" value="Ghazipur"></option>
+                            <option value="Varanasi"></option>
+                            <option value="Lucknow"></option>
+                            <option value="New Delhi"></option>
+                            <option value="Jaunpur"></option>
+                            <option value="Noida"></option>
+                        </datalist>
+                        <i class="fa-solid fa-location-crosshairs"></i>
+                    </div>
+                    <div class="search_food_container">
+                        <input type="search" class="search_food_input" id="search"
+                            placeholder="Search Your Favourite Food is Here">
+                        <label for="search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- our best food section start -->
+        <section class="our_best_food_section">
+            <div class="our_best_food_container">
+                <div class="our_best_food">
+                    <img src="img/samosa-1.jpg"   alt="Aloo Samosa">
+                    <div class="our_best_food_detail">
+                        <h3>Aloo Samosa</h3>
+                        <a href="#" class="add_btn_1">
+                            <button>ADD<i class="ri-add-line"></i></button>
+                        </a>
+                    </div>
+                    <div class="best_food_amount_detail">
+                        <span>
+                            <h2>&#x20B9;</h2>
+                            <h2>12/-</h2>
+                        </span>
+                        <p>18% OFF</p>
+                    </div>
+                    <a href="#" class="add_btn_2">
+                        <button>ADD<i class="ri-add-line"></i></button>
+                    </a>
+                    <p class="fast_delivery">Fast Delivery</p>
+                </div>
+                <div class="our_best_food">
+                    <img src="img/samosa-3.jpg"   alt="Paneer Samosa">
+                    <div class="our_best_food_detail">
+                        <h3>Paneer Samosa</h3>
+                        <a href="#" class="add_btn_1">
+                            <button>ADD<i class="ri-add-line"></i></button>
+                        </a>
+                    </div>
+                    <div class="best_food_amount_detail">
+                        <span>
+                            <h2>&#x20B9;</h2>
+                            <h2>15/-</h2>
+                        </span>
+                        <p>12% OFF</p>
+                    </div>
+                    <a href="#" class="add_btn_2">
+                        <button>ADD<i class="ri-add-line"></i></button>
+                    </a>
+                    <p class="fast_delivery">Fast Delivery</p>
+                </div>
+                <div class="our_best_food">
+                    <img src="img/samosa-2.jpg"   alt="Chicken Samosa">
+                    <div class="our_best_food_detail">
+                        <h3>Chicken Samosa</h3>
+                        <a href="#" class="add_btn_1">
+                            <button>ADD<i class="ri-add-line"></i></button>
+                        </a>
+                    </div>
+                    <div class="best_food_amount_detail">
+                        <span>
+                            <h2>&#x20B9;</h2>
+                            <h2>30/-</h2>
+                        </span>
+                        <p>12% OFF</p>
+                    </div>
+                    <a href="#" class="add_btn_2">
+                        <button>ADD<i class="ri-add-line"></i></button>
+                    </a>
+                    <p class="fast_delivery">Fast Delivery</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer section start -->
+        <footer>
+            <div class="footer_container">
+                <div class="footer_quotes">
+                    <h3>Indulge in the Art of Flavor</h3>                    
+                    <p>
+                        "Indulge in a culinary journey at our restaurant. Discover exquisite flavors, impeccable service, and a cozy ambiance. Savor moments with us, where every bite tells a story."
+                    </p>
+                </div>
+                <h2>Magic Pan</h2>
+                <div class="footer_items_container">
+                    <div class="footer_items">
+                        <i class="ri-phone-fill"></i>
+                        <p>72757816XX</p>
+                    </div>
+                    <div class="footer_items">
+                        <i class="ri-mail-send-fill"></i>
+                        <p>magicpan@gmail.com</p>
+                    </div>
+                    <div class="footer_items">
+                        <i class="ri-map-pin-2-fill"></i>
+                        <p>Ghazipur, Uttar Pradesh</p>
+                    </div>
+                    <ul class="footer_social">
+                        <li><i class="ri-whatsapp-line"></i></li>
+                        <li><i class="ri-facebook-circle-fill"></i></li>
+                        <li><i class="ri-instagram-line"></i></li>
+                        <li><i class="ri-twitter-line"></i></li>
+                    </ul>
+                </div> 
+            </div> 
+            <ul class="footer_links">
+                <li class="menu_book_btn">View Menu</li>
+                <li class="login_menu_btn">Log in</li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <div class="last_footer">© Copyright 2022. All Rights Reserved . Managed By&nbsp;  
+                <span style="color: orangered;font-weight: bold;display: inline;">ArkCoder</span>
+        </footer>
+    </main>
+
+<!-- js link -->
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1211 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* customise screen scroll bar */
+
+::-webkit-scrollbar{
+    width: 15px;
+}
+
+::-webkit-scrollbar-track{
+    background: rgb(150, 150, 150);
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(rgb(0, 255, 208) , orangered);
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(232, 232, 232);
+}
+
+main{
+    width: 100%;
+    height: 100%;
+}
+
+
+/* header section start */
+
+.header_container{
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url(../img/burger-bg-img.jpg);
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 25px;
+}
+
+header .logo a{
+    font-size: 20px;
+    font-family: 'Lobster Two', cursive;
+    color: white;
+}
+
+.slider_menu{
+    display: none;
+}
+
+/* menu book show on click the button of view menu */
+.menu_book{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(9px);
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s;
+}
+
+.menu_book figure{
+    position: relative;
+}
+
+.menu_book figure img{
+    width: 700px;
+}
+
+.menu_book figure i{
+    position: absolute;
+    color: white;
+    top: -4%;
+    right: -4%;
+    z-index: 999;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.user_log{
+    display: flex;
+}
+
+.user_log .log_in_btn_container{
+    margin: 0px 15px;
+    font-size: 18px;
+    font-weight: bolder;
+    color: white;
+    transition: all .2s;
+    cursor: pointer;
+    font-family: 'Fjalla One', sans-serif;
+    display: flex;
+    align-items: center;
+}
+
+.user_log .log_in_btn_container:hover{
+    color: rgb(232, 232, 232);
+}
+
+.user_log .log_in_btn_container:hover .log_in_btn_icon{
+    border-color: rgb(232, 232, 232);
+}
+
+.log_in_btn_icon{
+    margin-right: 7px;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 2px;
+    font-size: 17px;
+}
+
+/* for login box */
+
+.log_box_container{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(9px);
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 998;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s;
+}
+
+.log_box_all_form_container{
+    position: relative;
+}
+
+.log_box_all_form_container .log_cross_icon{
+    position: absolute;
+    top: -4%;
+    right: -5%;
+    color: rgb(255, 255, 255);
+    background-color: orangered;
+    font-size: 16px;
+    z-index: 999;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: grid;
+    place-items: center;
+
+}
+
+.log_box{
+    position: relative;
+    width: 370px;
+    height: 465px;
+    background-color: white;
+    overflow: hidden;
+}
+
+/* log in form */
+
+.log_box .log_in_form{
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transition: all .5s;
+    /* display: none; */
+}
+
+.log_box .log_in_form h2{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.log_in_input_container{
+    position: relative;
+    margin: 20px 0px;
+}
+
+.log_in_input{
+    width: 100%;
+    height: 40px;
+    border: none;
+    background-color: rgb(231, 231, 231);
+    color: rgb(0, 0, 0);
+    outline: none;
+    padding: 0px 10px;
+    border-radius: 4px;
+    transition: all .3s;
+    font-family: 'Mooli', sans-serif;
+}
+
+.log_in_input{
+    width: 100%;
+    height: 40px;
+    border: none;
+    background-color: rgb(231, 231, 231);
+    color: rgb(0, 0, 0);
+    outline: none;
+    padding: 0px 10px;
+    border-radius: 4px;
+    transition: all .3s;
+    font-family: 'Mooli', sans-serif;
+    font-size: 13px;
+}
+
+.log_in_input:focus{
+    box-shadow: 0px 0px 3px 0px rgb(159, 159, 159); 
+    background-color: white;
+}
+
+.log_in_input:valid{
+    box-shadow: 0px 0px 3px 0px green; 
+}
+
+.log_in_input:not(:placeholder-shown).log_in_input:not(:focus){
+    background-color: white;
+}
+
+.log_in_input_label{
+    position: absolute;
+    top: 25%;
+    left: 2%;
+    z-index: 5;
+    color: rgb(0, 0, 0);
+    transition: all .3s;
+    padding: 2px 7px;
+    background-color: rgb(231, 231, 231);
+    font-family: 'Mooli', sans-serif;
+    font-size: 13px;
+}
+
+.log_in_input:focus ~ .log_in_input_label{
+    background-color: white;
+}
+
+.log_in_input:valid ~ .log_in_input_label{
+    color: green;
+}
+
+.log_in_input:focus ~ .log_in_input_label,
+.log_in_input:not(:placeholder-shown).log_in_input:not(:focus) ~ .log_in_input_label {
+    top: -23%;
+    font-size: 11px;
+    background-color: white;
+}
+
+.log_in_remember_container{
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.log_in_remember{
+    
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+}
+
+.log_in_remember_label{
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 12px;
+    font-weight: 100;
+    cursor: pointer;
+    margin-left: 5px;
+    display: grid;
+    place-items: center;
+    padding-top: 1.5px;
+}
+
+.no_log_in_account_container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.no_log_in_account_container p{
+    font-size: 15px;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.no_log_in_account_container p span{
+    margin-left: 7px;
+    cursor: pointer;
+}
+
+.login_submit_btn{
+    width: 100%;
+    height: 50px;
+    background-color: orangered;
+    border: none;
+    color: white;
+    box-shadow: 3px 3px 10px 0px rgba(255, 68, 0, 0.802);
+    margin-top: 20px;
+    transition: all .5s;
+    cursor: pointer;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.login_submit_btn:hover{
+    box-shadow: 0px 0px 0px 0px;
+}
+
+
+/* sign up form */
+
+.log_box_container .log_box .sign_up_form{
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 100%;
+    transition: all .5s;
+}
+
+.log_box_container .log_box .sign_up_form h2{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sign_up_input_container{
+    position: relative;
+    margin: 20px 0px;
+}
+
+.sign_up_input{
+    width: 100%;
+    height: 40px;
+    border: none;
+    background-color: rgb(231, 231, 231);
+    color: rgb(0, 0, 0);
+    outline: none;
+    padding: 0px 10px;
+    border-radius: 4px;
+    transition: all .3s;
+    font-family: 'Mooli', sans-serif;
+}
+
+.sign_up_input{
+    width: 100%;
+    height: 40px;
+    border: none;
+    background-color: rgb(231, 231, 231);
+    color: rgb(0, 0, 0);
+    outline: none;
+    padding: 0px 10px;
+    border-radius: 4px;
+    transition: all .3s;
+    font-family: 'Mooli', sans-serif;
+    font-size: 13px;
+}
+
+.sign_up_input:focus{
+    box-shadow: 0px 0px 3px 0px rgb(159, 159, 159); 
+    background-color: white;
+}
+
+.sign_up_input:valid{
+    box-shadow: 0px 0px 3px 0px green; 
+}
+
+.sign_up_input:not(:placeholder-shown).sign_up_input:not(:focus){
+    background-color: white;
+}
+
+.sign_up_input_label{
+    position: absolute;
+    top: 25%;
+    left: 2%;
+    z-index: 5;
+    color: rgb(0, 0, 0);
+    transition: all .3s;
+    padding: 2px 7px;
+    background-color: rgb(231, 231, 231);
+    font-family: 'Mooli', sans-serif;
+    font-size: 13px;
+}
+
+.sign_up_input:focus ~ .sign_up_input_label{
+    background-color: white;
+}
+
+.sign_up_input:valid ~ .sign_up_input_label{
+    color: green;
+}
+
+.sign_up_input:focus ~ .sign_up_input_label,
+.sign_up_input:not(:placeholder-shown).sign_up_input:not(:focus) ~ .sign_up_input_label {
+    top: -23%;
+    font-size: 11px;
+    background-color: white;
+}
+
+.sign_up_remember_container{
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.sign_up_remember{
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+}
+
+.sign_up_remember_label{
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 12px;
+    font-weight: 100;
+    cursor: pointer;
+    margin-left: 5px;
+    display: grid;
+    place-items: center;
+    padding-top: 1.5px;
+}
+
+
+.sign_up_submit_btn{
+    width: 100%;
+    height: 50px;
+    background-color: orangered;
+    border: none;
+    color: white;
+    box-shadow: 3px 3px 10px 0px rgba(255, 68, 0, 0.802);
+    margin-top: 20px;
+    transition: all .5s;
+    cursor: pointer;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.sign_up_submit_btn:hover{
+    box-shadow: 0px 0px 0px 0px;
+}
+
+.no_sign_up_account_container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.no_sign_up_account_container p{
+    font-size: 15px;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.no_sign_up_account_container p span{
+    margin-left: 7px;
+    cursor: pointer;
+}
+
+header #menu_button{
+    display: none;
+}
+
+.header_heading_serach_container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.header_heading_serach_container h1{
+    text-align: center;
+    font-family: 'Lobster Two', cursive;
+    font-size: 100px;
+    margin-top: 100px;
+    color: white;
+}
+
+.header_heading_serach_container p{
+    text-align: center;
+    font-family: 'Mooli', sans-serif;
+    font-size: 19px;
+    font-weight: bold;
+    color: white;
+    margin-top: 5px;
+}
+
+.search_food{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    padding-bottom: 100px;
+}
+
+.find_location_container{
+    position: relative;
+}
+
+.find_location_container i{
+    position: absolute;
+    top: 47%;
+    left: 8.5%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color:orangered;
+}
+
+.find_location_container::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(-50%, -50%);
+    width: .5px;
+    height: 33px;
+    background-color: rgb(73, 73, 73);
+}
+
+.find_location_container .location_input{
+    width: 250px;
+    padding: 15px 15px 15px 40px;
+    font-size: 15px;
+    outline: none;
+    border: none;
+    font-family: 'Mooli', sans-serif;
+    transition: all .2s;
+}
+
+.find_location_container .location_input:focus{
+    box-shadow: 0px 0px 10px 0px rgb(255, 255, 255);
+}
+
+.search_food_container{
+    position: relative;
+}
+
+.search_food_container i{
+    position: absolute;
+    top: 50%;
+    left: 7%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    /* color: rgb(136, 136, 136); */
+    color: orangered;
+}
+
+.search_food_container .search_food_input{
+    width: 400px;
+    padding: 15px 15px 15px 50px;
+    font-size: 15px;
+    outline: none;
+    border: none;
+    font-family: 'Mooli', sans-serif;
+    transition: all .2s;
+}
+
+.search_food_container .search_food_input:focus{
+    box-shadow: 0px 0px 10px 0px rgb(255, 255, 255);
+}
+
+
+
+/* our best food section start */
+
+.our_best_food_section{
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.our_best_food_section > h2{
+    text-align: center;
+    font-family: 'Mooli', sans-serif;
+    font-size: 30px;
+    color: orangered;
+}
+
+.our_best_food_container{
+    width: 100%;
+    display: flex;
+    padding: 0px 20px;
+    margin-top: 50px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.our_best_food{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px 0px rgb(176, 176, 176);
+}
+
+.our_best_food img{
+    width: 320px;
+    height: 250px;
+    border-radius: 10px 10px 0px 0px;
+    object-fit: cover;
+}
+
+.our_best_food_detail{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 15px;
+}
+
+.our_best_food_detail h3{
+    font-family: 'Mooli', sans-serif;
+    display: grid;
+    place-items: center;
+    font-size: 22px;
+}
+
+.our_best_food_detail .add_btn_1 button{
+    width: 100px;
+    border: 1px solid orangered;
+    background: none;
+    color: orangered;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.best_food_amount_detail{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 15px;
+}
+
+.best_food_amount_detail span{
+    display: flex;
+}
+
+.best_food_amount_detail span h2{
+    margin: 0px 3px;
+    display: grid;
+    place-items: center;
+    font-family: 'Fjalla One', sans-serif;
+    font-weight: 100;
+}
+
+.best_food_amount_detail span h2:nth-child(1){
+    font-size: 25px;
+}
+
+.best_food_amount_detail span h2:nth-child(2){
+    font-size: 23px;
+}
+
+.best_food_amount_detail p{
+    color: rgb(0, 214, 7);
+    font-size: 18px;
+    display: grid;
+    place-items: center;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.our_best_food .add_btn_2{
+    display: none;
+}
+
+.our_best_food .fast_delivery{
+    text-align: center;
+    padding: 15px;
+    font-family: 'Mooli', sans-serif;
+    border-top: 1px dotted orangered;
+    margin: 0px 10px;
+    animation: deliveryColorChange 3s linear infinite;
+    /* animation: scaleDelivery .7s linear infinite; */
+    color: orangered;
+}
+
+@keyframes deliveryColorChange {
+    0%{
+        color: orangered;
+    }
+    20%{
+        color: green;
+    }
+    40%{
+        color: yellow;
+    }
+    60%{
+        color: blue;
+    }
+    80%{
+        color: rgb(0, 255, 225)
+    }
+    100%{
+        color: orangered;
+    }
+    
+}
+
+@keyframes scaleDelivery {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.our_best_food_section .view_more_btn{
+    width: 130px;
+    height: 50px;
+    background-color: orangered;
+    border: none;
+    color: white;
+    box-shadow: 3px 3px 10px 0px rgba(255, 68, 0, 0.802);
+    margin-top: 50px;
+    transition: all .5s;
+    cursor: pointer;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.our_best_food_section .view_more_btn:hover{
+    box-shadow: 0px 0px 0px 0px;
+}
+
+
+/* footer section start */
+
+footer{
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,.9), rgba(0,0,0,.9)), url(../img/55.jpg);
+    background-size: cover;
+    margin-top: 150px;
+}
+
+.footer_container{
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    color: white;
+}
+
+.footer_quotes{
+    width: 300px;
+}
+
+.footer_quotes h3{
+    font-size: 28px;
+    font-family: 'Mooli', sans-serif;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.footer_quotes p{
+    font-size: 18px;
+    font-family: 'Mooli', sans-serif;
+    color: rgb(255, 255, 255);
+    text-align: justify;
+    margin-top: 20px;
+}
+
+.footer_container h2{
+    width: 300px;
+    font-size: 70px;
+    font-family: 'Lobster Two', cursive;
+    color: orangered;
+    text-align: center;
+    /* width: 100%; */
+}
+
+.footer_items_container{
+    width: 300px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+    padding: 0px 30px;
+}
+
+.footer_items{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.footer_items i{
+    font-size: 22px;
+    margin-right: 10px;
+}
+
+.footer_items p{
+    font-size: 16px;
+    font-family: 'Mooli', sans-serif;
+}
+
+.footer_social{
+    text-align: center;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer_social li{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0px 5px;
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    place-items: center;
+    transition: all .3s;
+    cursor: pointer;
+    border: 2px solid white;
+}
+
+.footer_social li:hover{
+    background: transparent;
+    border: 2px solid white;
+}
+
+.footer_social li i{
+    font-size: 25px;  
+    color: black;
+    transition: all .3s;
+}
+
+footer .footer_links li:hover{
+    color: rgb(208, 208, 208);
+}
+
+footer .footer_links li a{
+    color: white;
+    transition: all .3s;
+}
+
+footer .footer_links li a:hover{
+    color: rgb(208, 208, 208);
+}
+
+footer .footer_links{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid rgb(64, 64, 64);
+    padding-bottom: 20px;
+}
+
+footer .footer_links li{
+    font-size: 16px;
+    font-family: 'Mooli', sans-serif;
+    margin: 10px;
+    cursor: pointer;
+    color: white;
+    transition: all .3s;
+}
+
+footer .footer_links li:hover{
+    color: rgb(208, 208, 208);
+}
+
+footer .last_footer{
+    width: 100%;
+    text-align: center;
+    color: white;
+    display: block;
+    font-size: 15px;
+    font-family: 'Mooli', sans-serif;
+    padding: 20px 0px;
+}
+
+
+
+
+/* responsive for tablet screen */
+
+@media screen and (min-width:768px) and (max-width:992px) {
+    footer{
+        height: 513.33px;
+    }
+
+    .footer_container{
+        position: relative;
+        height: 400px;
+        padding: 170px 30px 40px 30px;
+        justify-content: center;
+        gap: 70px;
+        align-content: start;
+    }
+
+    .footer_container h2{
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+    }
+}
+
+
+
+/* responsive for small mobile screen */
+
+@media screen and (min-width:300px) and (max-width:350px) {
+    .our_best_food img{
+        width: 135px;
+        height: 130px;
+    }
+}
+
+/* responsive for medium mobile screen */
+
+@media screen and (min-width:351px) and (max-width:500px) {
+    .our_best_food img{
+        width: 155px;
+        height: 140px;
+    }
+}
+
+
+/* responsive for large mobile screen */
+
+@media screen and (min-width:501px) and (max-width:767px) {
+    .our_best_food img{
+        max-width: 230px;
+        max-height: 220px;
+    }
+}
+
+/* responsive for mobile screen */
+
+@media screen and (min-width:300px) and (max-width:767px) {
+    
+    /* header section */
+
+    .user_log .log_in_btn_container{
+        display: none;
+    }
+
+    .log_box_container .log_box{
+        width: 300px;
+    }
+
+    .log_box_container .log_box .sign_up_form{
+        padding: 24px;
+    }
+
+    header{
+        position: relative;
+    }
+
+
+    /* menu list slider for mobile */
+
+    .slider_menu{
+        display: block;
+        position: fixed;
+        top: 0%;
+        left: -100%;
+        width: 60%;
+        height: 100vh;
+        backdrop-filter: blur(15px);
+        z-index: 995;
+        transition: all .5s;
+    }
+
+    .slider_menu_logo{
+        text-align: center;
+        color: white;
+        font-family: 'Lobster Two', cursive;
+        font-size: 27px;
+        margin: 30px 0px 50px 0px;
+    }
+
+    .slider_menu ul{
+        width: 100%;
+    }
+
+    .slider_menu ul a{
+        margin: 20px 20px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        color: white;
+    }
+
+    .slider_menu ul li{
+        font-family: 'Mooli', sans-serif;
+        margin-left: 10px;
+    }
+
+    /* menu book show on click the button of view menu */
+
+    .menu_book{
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100vh;
+        backdrop-filter: blur(8px);
+        z-index: 999;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        transition: all .3s;
+    }
+
+    .menu_book figure{
+        position: relative;
+    }
+
+    .menu_book figure img{
+        width: 325px;
+    }
+
+    .menu_book figure i{
+        position: absolute;
+        color: white;
+        top: -4%;
+        right: -4%;
+        z-index: 999;
+        font-size: 27px;
+        cursor: pointer;
+    }
+ 
+
+    .slider_menu_phone{
+        position: absolute;
+        display: flex;
+        bottom: 5%;
+        left: 0%;
+        margin: 0px 20px;
+    }
+
+    .slider_menu_phone i{
+        font-size: 16px;
+        color: white;
+    }
+
+    .slider_menu_phone p{
+        margin-left: 10px;
+        color: white;
+        font-family: 'Mooli', sans-serif;
+        font-size: 15px;
+    }
+
+    header #menu_button{
+        display: block;
+        color: white;
+        font-size: 20px;
+    }
+    
+    .header_heading_serach_container h1{
+        font-size: 60px;
+    }
+
+    .header_heading_serach_container p{
+        font-size: 18px;
+    }
+
+    .find_location_container {
+        display: none;
+    }
+
+    .search_food_container{
+        width: 85%;
+    }
+
+    .search_food_container .search_food_input{
+        width: 100%;
+    }
+
+
+    /* our best food section */
+
+    .our_best_food_container{
+        gap: 15px;
+        padding: 0px 10px;
+    }
+
+    .our_best_food_detail{
+        margin: 10px 9px;
+    }
+
+    .our_best_food_detail h3{
+        font-size: 15px;
+    }
+
+    .our_best_food_detail .add_btn_1{
+        display: none;
+    }
+
+    .best_food_amount_detail{
+        margin: 10px 9px;
+    }
+    
+    .best_food_amount_detail span h2:nth-child(1){
+        font-size: 18px;
+    }
+    
+    .best_food_amount_detail span h2:nth-child(2) {
+        font-size: 16px;
+    }
+
+    .best_food_amount_detail p {
+        font-size: 15px;
+    }
+
+    .our_best_food .add_btn_2{
+        display: block;
+        width: 90%;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+
+    .our_best_food .add_btn_2 button{
+        width: 100%;
+        border: 1px solid orangered;
+        background: none;
+        color: orangered;
+        padding: 8px;
+        cursor: pointer;
+    }
+
+    .our_best_food .fast_delivery{
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .our_best_food_section .view_more_btn{
+        width: 110px;
+        height: 40px;
+        font-size: 13px;
+    }
+
+
+    /* footer section */
+
+    footer{
+        height: 695px;
+    }
+
+    .footer_container{
+        position: relative;
+        height: 565px;
+        padding: 40px 30px;
+    }
+
+    .footer_container h2{
+        position: absolute;
+        top: 14%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        font-size: 55px;
+    }
+
+    .footer_quotes{
+        position: absolute;
+        top: 42%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+    }
+
+    .footer_items_container{
+        position: absolute;
+        top: 77%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+    }
+
+    .footer_quotes h3{
+        font-size: 25px;
+    }
+
+    .footer_quotes p{
+        font-size: 16px;
+    }
+
+    footer .footer_links li{
+        font-size: 11px;
+    }
+
+    footer .last_footer{
+        font-size: 14px;
+        padding: 20px;
+        
+    }
+
+}

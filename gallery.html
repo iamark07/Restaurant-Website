@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Fjalla+One&family=Great+Vibes&family=Lobster+Two&family=Mooli&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- rimix icon cdn link -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- css link -->
+    <link rel="stylesheet" href="css/gallery.css">
+    <title>Gallery</title>
+</head>
+
+<body>
+    <main>
+
+        <!-- header section start -->
+        <section class="header_container">
+            <header>
+                <h3 class="logo"><a href="index.html">Magic Pan</a></h3>
+                <div class="user_log">
+                    <span class="log_in_btn_container login_menu_btn"><i class="ri-user-6-line log_in_btn_icon"></i>Log
+                        in
+                    </span>
+                    <div class="log_box_container" id="login_form_show">
+                        <div class="log_box_all_form_container">
+                            <i class="fa-solid fa-xmark log_cross_icon" id="log_form_close"></i>
+                            <div class="log_box">
+                                <form action="" class="log_in_form">
+                                    <h2>Log in</h2>
+                                    <div class="log_in_input_container">
+                                        <input type="text" id="name" class="log_in_input" placeholder=" " required>
+                                        <label for="name" class="log_in_input_label">Enter Username</label>
+                                    </div>
+                                    <div class="log_in_input_container">
+                                        <input type="password" id="password" class="log_in_input" placeholder=" "
+                                            required>
+                                        <label for="password" class="log_in_input_label">Enter Your Password</label>
+                                    </div>
+                                    <div class="log_in_remember_container">
+                                        <input type="checkbox" id="remember" class="log_in_remember">
+                                        <label for="remember" class="log_in_remember_label">Remember me</label>
+                                    </div>
+                                    <input type="submit" class="login_submit_btn">
+                                    <div class="no_log_in_account_container">
+                                        <p>Don't have an account?<span style="color: orangered;" id="sign_up">Sign
+                                                up</span> </p>
+                                    </div>
+                                </form>
+                                <form action="" class="sign_up_form">
+                                    <h2>Sign Up</h2>
+                                    <div class="sign_up_input_container">
+                                        <input type="text" id="sign_up_name" class="sign_up_input" placeholder=" "
+                                            required>
+                                        <label for="sign_up_name" class="sign_up_input_label">Enter Username</label>
+                                    </div>
+                                    <div class="sign_up_input_container">
+                                        <input type="password" id="sign_up_password" class="sign_up_input"
+                                            placeholder=" " required>
+                                        <label for="sign_up_password" class="sign_up_input_label">Enter Your
+                                            Password</label>
+                                    </div>
+                                    <div class="sign_up_input_container">
+                                        <input type="password" id="sign_up_confirm_password" class="sign_up_input"
+                                            placeholder=" " required>
+                                        <label for="sign_up_confirm_password" class="sign_up_input_label">Enter Confirm
+                                            Password</label>
+                                    </div>
+                                    <div class="sign_up_remember_container">
+                                        <input type="checkbox" id="sign_up_remember" class="sign_up_remember">
+                                        <label for="sign_up_remember" class="sign_up_remember_label">Remember me</label>
+                                    </div>
+                                    <input type="submit" class="sign_up_submit_btn">
+                                    <div class="no_sign_up_account_container">
+                                        <p>Already have an account?<span style="color: orangered;" id="log_in">Log
+                                                in</span> </p>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <span><a href="#">Sign up</a></span> -->
+                </div>
+
+                <!-- in the below html tag show only on mobile devices -->
+                <i class="ri-menu-3-fill" id="menu_button"></i>
+                <nav class="slider_menu" id="slide_menu">
+                    <h3 class="slider_menu_logo">Magic Pan</h3>
+                    <ul>
+                        <a href="index.html">
+                            <i class="ri-home-4-line"></i>
+                            <li>Home</li>
+                        </a>
+                        <a href="all_food.html">
+                            <i class="ri-restaurant-line"></i>
+                            <li>Foods</li>
+                        </a>
+                        <a href="gallery.html">
+                            <i class="ri-gallery-line"></i>
+                            <li>Gallery</li>
+                        </a>
+                        <a href="about.html">
+                            <i class="ri-team-line"></i>
+                            <li>About Us</li>
+                        </a>
+                        <a href="#" class="menu_book_btn">
+                            <i class="ri-book-open-line"></i>
+                            <li>View Menu</li>
+                        </a>
+                        <a href="contact.html">
+                            <i class="ri-customer-service-2-line"></i>
+                            <li>Contact us</li>
+                        </a>
+                        <a href="#">
+                            <i class="ri-map-pin-user-line"></i>
+                            <li>Choose Location</li>
+                        </a>
+                        <a href="#" class="login_menu_btn">
+                            <i class="ri-user-6-line"></i>
+                            <li>Log in</li>
+                        </a>
+                    </ul>
+                    <div class="slider_menu_phone">
+                        <i class="ri-phone-fill"></i>
+                        <p>72757816XX</p>
+                    </div>
+                </nav>
+                <!-- menu book show on view menu btn click -->
+                <div class="menu_book" id="menu-book">
+                    <figure>
+                        <img src="img/menu-book.jpg"   alt="menu book">
+                        <i class="ri-close-circle-line" id="close_menu_book"></i>
+                    </figure>
+                </div>
+            </header>
+            <div class="header_heading_serach_container">
+                <h1>Gallery</h1>
+                <p>Remove stress view our gallery.</p>
+                <div class="search_food">
+                    <div class="find_location_container">
+                        <input list="locations" name="location" class="location_input" id="location"
+                            placeholder="Choose Your Location">
+                        <datalist id="locations">
+                            <option class="red" value="Ghazipur"></option>
+                            <option value="Varanasi"></option>
+                            <option value="Lucknow"></option>
+                            <option value="New Delhi"></option>
+                            <option value="Jaunpur"></option>
+                            <option value="Noida"></option>
+                        </datalist>
+                        <i class="fa-solid fa-location-crosshairs"></i>
+                    </div>
+                    <div class="search_food_container">
+                        <input type="search" class="search_food_input" id="search"
+                            placeholder="Search Your Favourite Food is Here">
+                        <label for="search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- gallery section start -->
+        <section class="gallery_section">
+            <h2>View it now, enjoy it more</h2>
+            <div class="gallery_container">
+                <div class="gallery">
+                    <figure>
+                        <img src="img/gallery-1.jpg"   alt="Gallery image" class="gallery_img">
+                        <figcaption>
+                            <h5 onclick="showFullGallery1()">View</h5>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="gallery">
+                    <figure>
+                        <img src="img/gallery-2.jpg"   alt="Gallery image" class="gallery_img">
+                        <figcaption>
+                            <h5 onclick="showFullGallery2()">View</h5>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="gallery">
+                    <figure>
+                        <img src="img/gallery-3.jpg"   alt="Gallery image" class="gallery_img">
+                        <figcaption>
+                            <h5 onclick="showFullGallery3()">View</h5>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="gallery">
+                    <figure>
+                        <img src="img/coffee-1.jpg"   alt="Gallery image" class="gallery_img">
+                        <figcaption>
+                            <h5 onclick="showFullGallery4()">View</h5>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="gallery">
+                    <figure>
+                        <img src="img/gallery-5.jpg"   alt="Gallery image" class="gallery_img">
+                        <figcaption>
+                            <h5 onclick="showFullGallery5()">View</h5>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="gallery">
+                    <figure>
+                        <img src="img/gallery-6.jpg"   alt="Gallery image" class="gallery_img">
+                        <figcaption>
+                            <h5 onclick="showFullGallery6()">View</h5>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="gallery">
+                    <figure>
+                        <img src="img/gallery-7.jpg"   alt="Gallery image" class="gallery_img">
+                        <figcaption>
+                            <h5 onclick="showFullGallery7()">View</h5>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="gallery">
+                    <figure>
+                        <img src="img/gallery-8.jpg"   alt="Gallery image" class="gallery_img">
+                        <figcaption>
+                            <h5 onclick="showFullGallery8()">View</h5>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="gallery">
+                    <figure>
+                        <img src="img/gallery-9.jpg"   alt="Gallery image" class="gallery_img">
+                        <figcaption>
+                            <h5 onclick="showFullGallery9()">View</h5>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="gallery">
+                    <figure>
+                        <img src="img/gallery-10.jpg"   alt="Gallery image" class="gallery_img">
+                        <figcaption>
+                            <h5 onclick="showFullGallery10()">View</h5>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="gallery">
+                    <figure>
+                        <img src="img/gallery-11.jpg"   alt="Gallery image" class="gallery_img">
+                        <figcaption>
+                            <h5 onclick="showFullGallery11()">View</h5>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="gallery">
+                    <figure>
+                        <img src="img/gallery-12.jpg"   alt="Gallery image" class="gallery_img">
+                        <figcaption>
+                            <h5 onclick="showFullGallery12()">View</h5>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="gallery">
+                    <figure>
+                        <img src="img/gallery-13.jpg"   alt="Gallery image" class="gallery_img">
+                        <figcaption>
+                            <h5 onclick="showFullGallery13()">View</h5>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="gallery">
+                    <figure>
+                        <img src="img/gallery-14.jpg"   alt="Gallery image" class="gallery_img">
+                        <figcaption>
+                            <h5 onclick="showFullGallery14()">View</h5>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="gallery">
+                    <figure>
+                        <img src="img/gallery-15.jpg"   alt="Gallery image" class="gallery_img">
+                        <figcaption>
+                            <h5 onclick="showFullGallery15()">View</h5>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="gallery">
+                    <figure>
+                        <img src="img/gallery-16.jpg"   alt="Gallery image" class="gallery_img">
+                        <figcaption>
+                            <h5 onclick="showFullGallery16()">View</h5>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="full_screen_img_container" id="full_screen_img_show1">
+                    <figure>
+                        <img src="img/gallery-1.jpg"   alt="Gallery image" class="full_screen_img">
+                        <i class="ri-close-circle-line" onclick="closeFullGallery1()"
+                            id="close_full_screen_img_icon"></i>
+                    </figure>
+                </div>
+                <div class="full_screen_img_container" id="full_screen_img_show2">
+                    <figure>
+                        <img src="img/gallery-2.jpg"   alt="Gallery image" class="full_screen_img">
+                        <i class="ri-close-circle-line" onclick="closeFullGallery2()"
+                            id="close_full_screen_img_icon"></i>
+                    </figure>
+                </div>
+                <div class="full_screen_img_container" id="full_screen_img_show3">
+                    <figure>
+                        <img src="img/gallery-3.jpg"   alt="Gallery image" class="full_screen_img">
+                        <i class="ri-close-circle-line" onclick="closeFullGallery3()"
+                            id="close_full_screen_img_icon"></i>
+                    </figure>
+                </div>
+                <div class="full_screen_img_container" id="full_screen_img_show4">
+                    <figure>
+                        <img src="img/coffee-1.jpg"   alt="Gallery image" class="full_screen_img">
+                        <i class="ri-close-circle-line" onclick="closeFullGallery4()"
+                            id="close_full_screen_img_icon"></i>
+                    </figure>
+                </div>
+                <div class="full_screen_img_container" id="full_screen_img_show5">
+                    <figure>
+                        <img src="img/gallery-5.jpg"   alt="Gallery image" class="full_screen_img">
+                        <i class="ri-close-circle-line" onclick="closeFullGallery5()"
+                            id="close_full_screen_img_icon"></i>
+                    </figure>
+                </div>
+                <div class="full_screen_img_container" id="full_screen_img_show6">
+                    <figure>
+                        <img src="img/gallery-6.jpg"   alt="Gallery image" class="full_screen_img">
+                        <i class="ri-close-circle-line" onclick="closeFullGallery6()"
+                            id="close_full_screen_img_icon"></i>
+                    </figure>
+                </div>
+                <div class="full_screen_img_container" id="full_screen_img_show7">
+                    <figure>
+                        <img src="img/gallery-7.jpg"   alt="Gallery image" class="full_screen_img">
+                        <i class="ri-close-circle-line" onclick="closeFullGallery7()"
+                            id="close_full_screen_img_icon"></i>
+                    </figure>
+                </div>
+                <div class="full_screen_img_container" id="full_screen_img_show8">
+                    <figure>
+                        <img src="img/gallery-8.jpg"   alt="Gallery image" class="full_screen_img">
+                        <i class="ri-close-circle-line" onclick="closeFullGallery8()"
+                            id="close_full_screen_img_icon"></i>
+                    </figure>
+                </div>
+                <div class="full_screen_img_container" id="full_screen_img_show9">
+                    <figure>
+                        <img src="img/gallery-9.jpg"   alt="Gallery image" class="full_screen_img">
+                        <i class="ri-close-circle-line" onclick="closeFullGallery9()"
+                            id="close_full_screen_img_icon"></i>
+                    </figure>
+                </div>
+                <div class="full_screen_img_container" id="full_screen_img_show10">
+                    <figure>
+                        <img src="img/gallery-10.jpg"   alt="Gallery image" class="full_screen_img">
+                        <i class="ri-close-circle-line" onclick="closeFullGallery10()"
+                            id="close_full_screen_img_icon"></i>
+                    </figure>
+                </div>
+                <div class="full_screen_img_container" id="full_screen_img_show11">
+                    <figure>
+                        <img src="img/gallery-11.jpg"   alt="Gallery image" class="full_screen_img">
+                        <i class="ri-close-circle-line" onclick="closeFullGallery11()"
+                            id="close_full_screen_img_icon"></i>
+                    </figure>
+                </div>
+                <div class="full_screen_img_container" id="full_screen_img_show12">
+                    <figure>
+                        <img src="img/gallery-12.jpg"   alt="Gallery image" class="full_screen_img">
+                        <i class="ri-close-circle-line" onclick="closeFullGallery12()"
+                            id="close_full_screen_img_icon"></i>
+                    </figure>
+                </div>
+                <div class="full_screen_img_container" id="full_screen_img_show13">
+                    <figure>
+                        <img src="img/gallery-13.jpg"   alt="Gallery image" class="full_screen_img">
+                        <i class="ri-close-circle-line" onclick="closeFullGallery13()"
+                            id="close_full_screen_img_icon"></i>
+                    </figure>
+                </div>
+                <div class="full_screen_img_container" id="full_screen_img_show14">
+                    <figure>
+                        <img src="img/gallery-14.jpg"   alt="Gallery image" class="full_screen_img">
+                        <i class="ri-close-circle-line" onclick="closeFullGallery14()"
+                            id="close_full_screen_img_icon"></i>
+                    </figure>
+                </div>
+                <div class="full_screen_img_container" id="full_screen_img_show15">
+                    <figure>
+                        <img src="img/gallery-15.jpg"   alt="Gallery image" class="full_screen_img">
+                        <i class="ri-close-circle-line" onclick="closeFullGallery15()"
+                            id="close_full_screen_img_icon"></i>
+                    </figure>
+                </div>
+                <div class="full_screen_img_container" id="full_screen_img_show16">
+                    <figure>
+                        <img src="img/gallery-16.jpg"   alt="Gallery image" class="full_screen_img">
+                        <i class="ri-close-circle-line" onclick="closeFullGallery16()"
+                            id="close_full_screen_img_icon"></i>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <!-- footer section start -->
+        <footer>
+            <div class="footer_container">
+                <div class="footer_quotes">
+                    <h3>Indulge in the Art of Flavor</h3>
+                    <p>
+                        "Indulge in a culinary journey at our restaurant. Discover exquisite flavors, impeccable
+                        service, and a cozy ambiance. Savor moments with us, where every bite tells a story."
+                    </p>
+                </div>
+                <h2>Magic Pan</h2>
+                <div class="footer_items_container">
+                    <div class="footer_items">
+                        <i class="ri-phone-fill"></i>
+                        <p>72757816XX</p>
+                    </div>
+                    <div class="footer_items">
+                        <i class="ri-mail-send-fill"></i>
+                        <p>magicpan@gmail.com</p>
+                    </div>
+                    <div class="footer_items">
+                        <i class="ri-map-pin-2-fill"></i>
+                        <p>Ghazipur, Uttar Pradesh</p>
+                    </div>
+                    <ul class="footer_social">
+                        <li><i class="ri-whatsapp-line"></i></li>
+                        <li><i class="ri-facebook-circle-fill"></i></li>
+                        <li><i class="ri-instagram-line"></i></li>
+                        <li><i class="ri-twitter-line"></i></li>
+                    </ul>
+                </div>
+            </div>
+            <ul class="footer_links">
+                <li class="menu_book_btn">View Menu</li>
+                <li class="login_menu_btn">Log in</li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <div class="last_footer">© Copyright 2022. All Rights Reserved . Managed By&nbsp;
+                <span style="color: orangered;font-weight: bold;display: inline;">ArkCoder</span>
+        </footer>
+    </main>
+
+    <!-- js link -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
